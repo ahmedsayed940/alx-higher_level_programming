@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import this
-print("The Zen of Python, by Tim Peters\n", this.s)
+print("The Zen of Python, by Tim Peters\n\n" + this.s)
