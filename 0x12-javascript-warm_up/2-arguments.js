@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const myVar = process.argv.length;
 if (myVar === 2) {
-	console.log('No argument');
+  console.log('No argument');
 } else {
-	console.log('Argument found');
+  console.log('Argument found');
 }
