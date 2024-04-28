@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" 'Arizona' """
 import MySQLdb
 import sys
 
