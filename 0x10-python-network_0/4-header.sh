@@ -1,10 +1,3 @@
 #!/bin/bash
-
-# Check if URL argument is provided
-if [ -z "$1" ]; then
-	    echo "Usage: $0 <URL>"
-	        exit 1
-fi
-
-# Send GET request to the URL with the specified header and display the body of the response
-curl -s -H "X-School-User-Id: 98" "$1"
+# sends a GET request to the URL, and displays the body of the response
+curl "$1" -sX GET -H "X-HolbertonSchool-User-Id:98"
