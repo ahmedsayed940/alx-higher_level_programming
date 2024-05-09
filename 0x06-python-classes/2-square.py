@@ -4,7 +4,7 @@
 
 class Square:
     """ empty class Square """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ attribute:
             size: size os squara.
         """
