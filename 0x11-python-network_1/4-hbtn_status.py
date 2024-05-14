@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""
+Python script that fetches an URL with requests package
+"""
 import requests
 
-url = 'https://alx-intranet.hbtn.io/status'
 
-response = requests.get(url)
-
-print("Body response:")
-print("\t- type:", type(response.text))
-print("\t- content:", response.text)
+if __name__ == "__main__":
+    r = requests.get('https://alx-intranet.hbtn.io/status')
+    t = r.text
+    print('Body response:\n\t- type: {}\n\t- content: {}'.format(type(t), t))
