@@ -9,12 +9,12 @@ class Square:
         """ attribute:
             size: size os squara.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        return (self.__size)
+        return (self._size)
 
     @size.setter
     def size(self, value):
@@ -31,13 +31,13 @@ class Square:
 
     @position.setter
     def position(self, value1):
-        if isinstance((value1, tuple) and len(value1) == 2 and
+        if not (isinstance(value1, tuple) and len(value1) == 2 and
                 all(isinstance(x, int) for x in value1) and
-                all(x > 0 for x in value1)):
-            self.__position = value1
+                all(x >= 0 for x in value1)):
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            TypeError("position must be a tuple of 2 positive integers")
-        
+            self.__position = value1
+
     def area(self):
         """ returns the current square area """
         return (self.__size * self.__size)
